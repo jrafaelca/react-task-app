@@ -9,7 +9,9 @@ function Card({title, description, children}) {
 
             {(description || children) &&
                 <div className="text-sm text-gray-500">
-                    {description}
+                    <p className="mb-4">
+                        {description}
+                    </p>
                     {children}
                 </div>
             }
