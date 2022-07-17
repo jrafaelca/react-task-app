@@ -7,6 +7,7 @@ function Button({children, type}) {
             {
                 'text-gray-700 bg-gray-100 hover:bg-gray-200': !type,
                 'text-white bg-blue-500 hover:bg-blue-600': type === 'primary',
+                'text-white bg-green-500 hover:bg-green-600': type === 'success',
                 'text-white bg-red-500 hover:bg-red-600': type === 'danger',
             }
         )}>
