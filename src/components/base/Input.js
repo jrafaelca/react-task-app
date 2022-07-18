@@ -1,12 +1,12 @@
-function Input({label, type, value, placeholder, onChange}) {
+function Input({label, name, type, value, placeholder, onChange}) {
     return (
         <div className="mb-3">
-            <label className="font-semibold block mb-2">
+            <label htmlFor={name} className="font-semibold block mb-2">
                 {label}
             </label>
 
             <input
-                name={label}
+                name={name}
                 type={type}
                 value={value}
                 placeholder={placeholder}

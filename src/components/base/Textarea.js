@@ -1,4 +1,4 @@
-function Textarea({label, type, value, placeholder, onChange}) {
+function Textarea({label, name, value, placeholder, onChange}) {
     return (
         <div className="mb-3">
             <label className="font-semibold block mb-2">
@@ -6,7 +6,7 @@ function Textarea({label, type, value, placeholder, onChange}) {
             </label>
 
             <textarea
-                name={label}
+                name={name}
                 value={value}
                 placeholder={placeholder}
                 onChange={onChange}
