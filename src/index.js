@@ -6,6 +6,7 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
+import {DataProvider} from "./context";
 
 // Pages
 import App from './App';
@@ -16,13 +17,15 @@ import Delete from './Delete';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App/>}/>
-                <Route path="/create" element={<Create/>}/>
-                <Route path="/edit" element={<Edit/>}/>
-                <Route path="/delete" element={<Delete/>}/>
-            </Routes>
-        </BrowserRouter>
+        <DataProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<App/>}/>
+                    <Route path="/create" element={<Create/>}/>
+                    <Route path="/edit/:id" element={<Edit/>}/>
+                    <Route path="/delete/:id" element={<Delete/>}/>
+                </Routes>
+            </BrowserRouter>
+        </DataProvider>
     </React.StrictMode>
 );
